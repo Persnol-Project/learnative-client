@@ -1,0 +1,36 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ant-design/icons": "^4.6.2",
+    "@material-ui/icons": "^4.11.2",
+    "@stripe/stripe-js": "^1.17.1",
+    "antd": "^4.16.11",
+    "axios": "^0.21.1",
+    "bootstrap": "^5.1.0",
+    "bootstrap4": "0.0.1-security",
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^0.19.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb-client-encryption": "^1.2.6",
+    "next": "^11.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-image-file-resizer": "^0.4.7",
+    "react-loadingg": "^1.7.2",
+    "react-markdown": "^7.0.0",
+    "react-player": "^2.9.0",
+    "react-toastify": "^7.0.4"
+  }
+}
