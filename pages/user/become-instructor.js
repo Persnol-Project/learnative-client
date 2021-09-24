@@ -83,10 +83,13 @@ const BecomeInstructor = () => {
           <div className="text-center p-3">
             <h1>Why to join us?</h1>
 
-            <div className="row ">
-              <span className="col-md-3 mx-auto card pb-2 how-can-we-help">
-                <div className="card-title" style={{ fontSize: "1.5rem" }}>
-                  Design the course, the way you want...
+            <div className="row flex-fix">
+              <div
+                className="col-md-4 mx-auto card pb-2 how-can-we-help"
+                style={{ borderRadius: "10px" }}
+              >
+                <div className="card-title pt-2" style={{ fontSize: "1.5rem" }}>
+                  📝 Design the course, the way you want...
                 </div>
                 <img src="/course_design.svg" />
                 <div style={{ fontSize: "1.2rem", textAlign: "left" }}>
@@ -94,11 +97,14 @@ const BecomeInstructor = () => {
                   course structure according to you. The way you want to teach
                   is upto you only.
                 </div>
-              </span>
+              </div>
 
-              <span className="col-md-3 mx-auto card pb-2 how-can-we-help">
-                <div className="card-title" style={{ fontSize: "1.5rem" }}>
-                  Record the course video...
+              <div
+                className="col-md-4 mx-auto card pb-2 how-can-we-help"
+                style={{ borderRadius: "10px" }}
+              >
+                <div className="card-title pt-2" style={{ fontSize: "1.5rem" }}>
+                  📹 Record the course video...
                 </div>
                 <img src="/course_recording.svg" />
                 <div style={{ fontSize: "1.2rem", textAlign: "left" }}>
@@ -106,10 +112,13 @@ const BecomeInstructor = () => {
                   smartphone. If you don’t like being on camera, just record
                   your screen.
                 </div>
-              </span>
-              <span className="col-md-3 mx-auto card pb-2 how-can-we-help">
-                <div className="card-title" style={{ fontSize: "1.5rem" }}>
-                  Launch your course...
+              </div>
+              <div
+                className="col-md-4 mx-auto card pb-2 how-can-we-help"
+                style={{ borderRadius: "10px" }}
+              >
+                <div className="card-title pt-2" style={{ fontSize: "1.5rem" }}>
+                  🚀 Launch your course...
                 </div>
                 <img src="/course_launch.svg" />
                 <div style={{ fontSize: "1.2rem", textAlign: "left" }}>
@@ -118,18 +127,18 @@ const BecomeInstructor = () => {
                   course on our website, through each paid enrollment you get
                   paid directly.
                 </div>
-              </span>
+              </div>
             </div>
           </div>
           <div className="text-center p-3">
             <h1>How can we help you?</h1>
-            <div className="row">
+            <div className="row flex-fix">
               <span
                 className="col-md-4 mx-auto card pb-2 how-can-we-help-1"
                 style={{ borderRadius: "10px" }}
               >
                 <div className="card-title" style={{ fontSize: "1.5rem" }}>
-                  Recording the course
+                  Course Structure
                 </div>
                 <img src="/course_review.svg" />
                 <div style={{ fontSize: "1.2rem", textAlign: "left" }}>
@@ -139,7 +148,10 @@ const BecomeInstructor = () => {
                 </div>
               </span>
 
-              <span className="col-md-4  mx-auto card pb-2 how-can-we-help-1">
+              <span
+                className="col-md-4  mx-auto card pb-2 how-can-we-help-1"
+                style={{ borderRadius: "10px" }}
+              >
                 <div className="card-title" style={{ fontSize: "1.5rem" }}>
                   Getting traffic for your course
                 </div>
@@ -159,8 +171,8 @@ const BecomeInstructor = () => {
                 src="/become_instructor.svg"
                 className="text-center pb-3"
                 style={{
-                  height: "40vh",
-                  widthL: "30vw",
+                  width: "80vw",
+                  maxWidth: "400px",
                 }}
               />
               <br />
@@ -211,7 +223,6 @@ const BecomeInstructor = () => {
           </div>
         </div>
       </div>
-
     </>
   );
 };

@@ -76,52 +76,13 @@ const SingleCourse = () => {
     <StudentRoutes>
       {/* <h1>Course Slug {JSON.stringify(course, null, 4)}</h1> */}
       <div className="row">
-        <div style={{ maxWidth: 320 }}>
-          <Button
-            onClick={() => setCollapsed(!collapsed)}
-            className="text-primary mt-1 btn-block mb-2 getting-started"
-          >
-            {createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined)}{" "}
-            {!collapsed && "Lessons"}
-          </Button>
-
-          <Menu
-            defaultSelectedKeys={[clicked]}
-            inlineCollapsed={collapsed}
-            style={{ height: "80vh", overflowX: "hidden" }}
-          >
-            {course.lessons.map((lesson, index) => (
-              <Item
-                className="row"
-                onClick={() => setClicked(index)}
-                key={index}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                }}
-                // icon={<Avatar className="">{index + 1}</Avatar>}
-              >
-                <Avatar style={{ color: "black" }}>{index + 1}</Avatar>{" "}
-                {lesson.title.substring(0, 30)}
-                {completedLessons.includes(lesson._id) ? (
-                  <CheckCircleFilled
-                    className=" text-primary  mt-3 "
-                    style={{ float: "right", marginRight: "0%" }}
-                  />
-                ) : (
-                  <MinusCircleFilled
-                    className="float-right text-danger  mt-3"
-                    style={{ float: "right" }}
-                  />
-                )}
-              </Item>
-            ))}
-          </Menu>
-        </div>
-        <div className="col">
+        <div className=" col-md-12" style={{ width: "100%" }}>
           {clicked !== -1 ? (
             <>
-              <div className="col alert alert-primary square">
+              <div
+                className="col alert square"
+                style={{ background: "#92B7FF" }}
+              >
                 <b>{course.lessons[clicked].title.substring(0, 30)}</b>
                 {completedLessons.includes(course.lessons[clicked]._id) ? (
                   <span
@@ -155,19 +116,73 @@ const SingleCourse = () => {
                     </div>
                   </>
                 )}
-              <ReactMarkdown
-                children={course.lessons[clicked].content}
-                className="single-post"
-              />
+
+              <div
+                style={{
+                  background: "#5A6DF5",
+                  color: "white",
+                  borderRadius: "15px",
+                }}
+              >
+                <div className="text-center p-3" style={{ fontSize: "2rem" }}>
+                  Description:{" "}
+                </div>
+                <ReactMarkdown
+                  children={course.lessons[clicked].content}
+                  className="single-post p-3"
+                />
+              </div>
             </>
           ) : (
             <div className="d-flex justify-content-center p-5">
               <div className="text-center p-5">
                 <PlayCircleOutlined className="text-primary display-1 p-5" />
-                <p className="lead">Clcik on the lessons to start learning</p>
+                <p className="lead">Click on the lessons to start learning</p>
               </div>
             </div>
           )}
+        </div>
+        <div className="col-md-9 mx-auto" style={{ minWidth: "320px" }}>
+          <Button
+            onClick={() => setCollapsed(!collapsed)}
+            className="text-primary mt-1 btn-block mb-2 getting-started"
+          >
+            {createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined)}{" "}
+            {!collapsed && "Lessons"}
+          </Button>
+
+          <Menu
+            defaultSelectedKeys={[clicked]}
+            inlineCollapsed={collapsed}
+            style={{ overflowX: "hidden" }}
+          >
+            {course.lessons.map((lesson, index) => (
+              <Item
+                className="row pt-1 pb-2"
+                onClick={() => setClicked(index)}
+                key={index}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                }}
+                // icon={<Avatar className="">{index + 1}</Avatar>}
+              >
+                <Avatar style={{ color: "black" }}>{index + 1}</Avatar>{" "}
+                {lesson.title.substring(0, 30)}
+                {completedLessons.includes(lesson._id) ? (
+                  <CheckCircleFilled
+                    className=" text-primary  mt-3 "
+                    style={{ float: "right", marginRight: "0%" }}
+                  />
+                ) : (
+                  <MinusCircleFilled
+                    className="float-right text-danger  mt-3"
+                    style={{ float: "right" }}
+                  />
+                )}
+              </Item>
+            ))}
+          </Menu>
         </div>
       </div>
     </StudentRoutes>

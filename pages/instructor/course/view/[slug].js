@@ -162,6 +162,7 @@ const CourseView = () => {
                 size={80}
                 src={course.image ? course.image.Location : "./Course.png"}
               />
+              <hr />
               <div className="media-body pl-2">
                 <div className="row">
                   <div className="col  description">
@@ -277,7 +278,13 @@ const CourseView = () => {
                   itemLayout="horizontal"
                   dataSource={course && course.lessons}
                   renderItem={(item, index) => (
-                    <Item className="display_flex_">
+                    <Item
+                      className="row"
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                      }}
+                    >
                       <Avatar style={{ marginRight: "10px" }}>
                         {index + 1}
                       </Avatar>

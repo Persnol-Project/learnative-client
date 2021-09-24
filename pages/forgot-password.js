@@ -63,49 +63,53 @@ const ForgotPassword = () => {
       <h1 className="jumbotron text-center bg-primary square">
         Forgot Password
       </h1>
-      <div className="container col-md-4 offset-md-4 pb-5 pt-3">
-        <form onSubmit={success ? handleResetPassword : handleSubmit}>
-          <input
-            type="email"
-            className="form-control mb-4 p-4"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter email"
-            required
-          />
-          {success && (
-            <>
-              <input
-                type="text"
-                className="form-control mb-4 p-4"
-                value={code}
-                onChange={(e) => setCode(e.target.value)}
-                placeholder="Enter secret code"
-                required
-              />
-              <input
-                type="password"
-                className="form-control mb-4 p-4"
-                value={newPassword}
-                onChange={(e) => setNewPassowrd(e.target.value)}
-                placeholder="Enter new Password"
-                required
-              />
-            </>
-          )}
-          <br />
-          <button
-            type="submit"
-            className="btn btn-block btn-primary form-control width100 p-2 getting-started"
-            disabled={loading || !email}
-          >
-            {loading ? (
-              <SyncOutlined spin className="my-2" />
-            ) : (
-              <div className="my-2">Submit</div>
+
+      <div className="container row col-md-12 mx-auto  pb-5 pt-3">
+        <img src="forgot_password.svg" className="col-md-6 mr-5 p-2" />
+        <div className="col-md-6 my-auto">
+          <form onSubmit={success ? handleResetPassword : handleSubmit}>
+            <input
+              type="email"
+              className="form-control mb-4 p-4"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter email"
+              required
+            />
+            {success && (
+              <>
+                <input
+                  type="text"
+                  className="form-control mb-4 p-4"
+                  value={code}
+                  onChange={(e) => setCode(e.target.value)}
+                  placeholder="Enter secret code"
+                  required
+                />
+                <input
+                  type="password"
+                  className="form-control mb-4 p-4"
+                  value={newPassword}
+                  onChange={(e) => setNewPassowrd(e.target.value)}
+                  placeholder="Enter new Password"
+                  required
+                />
+              </>
             )}
-          </button>
-        </form>
+            <br />
+            <button
+              type="submit"
+              className="btn btn-block btn-primary form-control width100 p-2 getting-started"
+              disabled={loading || !email}
+            >
+              {loading ? (
+                <SyncOutlined spin className="my-2" />
+              ) : (
+                <div className="my-2">Submit</div>
+              )}
+            </button>
+          </form>
+        </div>
       </div>
     </>
   );

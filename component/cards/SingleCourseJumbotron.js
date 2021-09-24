@@ -3,6 +3,7 @@ import { currencyFormatter } from "../../utils/helpers";
 import { Badge, Modal } from "antd";
 import ReactPlayer from "react-player";
 import { Button } from "antd";
+import ReactMarkdown from "react-markdown";
 import { LoadingOutlined, SafetyOutlined } from "@ant-design/icons";
 const SingleCourseJumbotron = ({
   course,
@@ -34,9 +35,10 @@ const SingleCourseJumbotron = ({
       <div className="row">
         <div className="col-md-8">
           <h1 className="text-light font-weight-bold">{name}</h1>
-          <p className="lead">
+          <div className="lead">
             {description && description.substring(0, 160)}....
-          </p>
+          </div>
+
           {/* <Badge
             count={category}
             style={{ backgroundColor: "#03a9f4" }}

@@ -43,6 +43,7 @@ const AddLessonForm = ({
                 <CloseCircleFilled className="text-danger ml-2 d-flex justify-content-center pt-4 pointer" />
               </span>
             </Tooltip>
+            
           )}
         </div>
         <div className="progressbar">

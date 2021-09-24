@@ -44,7 +44,7 @@ const Login = () => {
       <div className="container row col-md-12 pb-5 mx-auto pt-2">
         <img src="login.svg" className="col-md-6 mr-2 p-2" />
         <div className="col-md-6 my-auto">
-          <form onSubmit={handleSubmit} className=" mx-auto">
+          <form onSubmit={handleSubmit} className="mt-5  mx-auto">
             <input
               type="email"
               className="form-control mb-4 p-4"

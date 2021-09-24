@@ -6,11 +6,12 @@ import Link from "next/link";
 import { Context } from "../context";
 import { useRouter } from "next/router";
 import user from "../../server/models/user";
-
+import Select from "react-dropdown-select";
 const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [school, setSchool] = useState("");
   const [loading, setLoading] = useState(false);
 
   const router = useRouter();
@@ -29,6 +30,7 @@ const Register = () => {
         name,
         email,
         password,
+        school,
       });
       // console.table("Register responce", data);
       toast.success("✅ Registeration Successful... Please Login");
@@ -36,17 +38,19 @@ const Register = () => {
       setName("");
       setEmail("");
       setPassword("");
+      setSchool("");
     } catch (err) {
       var s = err.response.data;
       toast.error(`❌ ${s}`);
       setLoading(false);
     }
   };
+  const op = [{ name: "Satyaprakash" }, { name: "Sos" }];
   return (
     <>
       <h1 className="jumbotron text-center bg-primary square mb-3">Register</h1>
       <div className="container row col-md-12 pb-5 mx-auto pt-2">
-        <img src="register.svg" className="col-md-6 mr-2 p-2" />
+        <img src="register.svg" className="col-md-6 mr-5 p-2" />
 
         <div className="col-md-6 my-auto">
           <form onSubmit={handleSubmit}>
@@ -74,10 +78,25 @@ const Register = () => {
               placeholder="Enter password"
               required
             />
+            <Select
+              required={true}
+              options={op}
+              onChange={(e) => {
+                console.log(e[0].name);
+                setSchool(e[0].name);
+              }}
+              className="form-control mb-4 p-4 select-school"
+              searchBy={"name"}
+              valueField={"name"}
+              labelField={"name"}
+              create={true}
+              multi={false}
+              placeholder={"Enter School"}
+            />
             <button
               type="submit"
               className="btn btn-block btn-primary form-control width100 p-2 getting-started"
-              disabled={!name || !email || !password || loading}
+              disabled={!name || !email || !password || loading || !school}
               style={{
                 backgroundColor: "#2E47FF",
                 borderColor: "#2E47FF",

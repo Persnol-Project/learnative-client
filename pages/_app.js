@@ -8,7 +8,6 @@ import Topnav from "../component/Topnav";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Provider } from "../context";
-
 function MyApp({ Component, pageProps }) {
   return (
     <>
@@ -16,6 +15,7 @@ function MyApp({ Component, pageProps }) {
         <ToastContainer position="top-center" transition={Flip} />
         <Topnav className="top-nav2" />
         <Component {...pageProps} />
+        
         <Footer />
       </Provider>
     </>
