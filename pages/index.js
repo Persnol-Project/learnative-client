@@ -6,6 +6,7 @@ import Username from "./user_name";
 import Head from "next/head";
 import CourseTooltip from "./CourseTooltip";
 import CourseCard from "../component/cards/CourseCard";
+
 const Index = ({ courses }) => {
   //const [courses, setCourses] = useState([]);
 
