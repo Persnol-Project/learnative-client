@@ -3,6 +3,7 @@ import axios from "axios";
 import Context from "../context/index";
 import Username from "./user_name";
 //import { Context } from "../../context";
+import Head from "next/head";
 import CourseTooltip from "./CourseTooltip";
 import CourseCard from "../component/cards/CourseCard";
 const Index = ({ courses }) => {
@@ -17,6 +18,10 @@ const Index = ({ courses }) => {
   // }, []);
   return (
     <>
+      <Head>
+        <title>Learnative</title>
+        {/* Add meta data for better SEO */}
+      </Head>
       <div
         style={{
           background: "black",
