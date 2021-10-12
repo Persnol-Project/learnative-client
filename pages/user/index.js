@@ -6,9 +6,7 @@ import { Avatar } from "antd";
 import Link from "next/link";
 import { Tooltip } from "antd";
 import { SyncOutlined, PlayCircleOutlined } from "@ant-design/icons";
-
 const UserIndex = () => {
-  const [hidden, setHidden] = useState(true);
   const [courses, setCourses] = useState([]);
   const loadCourses = async () => {
     try {
@@ -40,7 +38,7 @@ const UserIndex = () => {
       )}
 
       <h1 className="jumbotron text-center square mb-3">
-        {user.name}'s dashboard
+        {user && user.name}'s dashboard
       </h1>
 
       {/* show list of courses */}
