@@ -74,7 +74,7 @@ const Login = () => {
               {loading ? <SyncOutlined spin className="mb-2" /> : "Submit"}
             </button>
           </form>
-          <p
+          <p 
             className="text-center pt-3"
             style={{
               fontWeight: "550",

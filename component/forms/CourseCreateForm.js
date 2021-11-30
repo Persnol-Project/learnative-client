@@ -29,6 +29,7 @@ const CourseCreateForm = ({
               placeholder="Name"
               value={values.name}
               onChange={handleChange}
+              autocomplete="off"
             />
           </div>
 
@@ -98,6 +99,7 @@ const CourseCreateForm = ({
               placeholder="Category"
               value={values.category}
               onChange={handleChange}
+              autocomplete="off"
             />
           </div>
 

@@ -156,16 +156,19 @@ const CourseView = () => {
       <div className="container-fluid pt-3 course-card">
         {/* <pre> {JSON.stringify(course, null, 4)} </pre> */}
         {course && (
-          <div className="container-fluid row pt-1">
-            <div className="row media flex-box pt-2 col-md-12">
+          <div
+            className="container-fluid row pt-1"
+            style={{ marginRight: "0%", marginLeft: "0%" }}
+          >
+            <div className="row media flex-box pt-2 col-md-12"  style={{ marginRight: "0%", marginLeft: "0%" }}>
               <Avatar
-                className="col-md-3"
+                className="col-md-4 text-center"
                 size={80}
                 src={course.image ? course.image.Location : "./Course.png"}
               />
 
-              <hr />
-              <div className="col-md-9 col-sm-12 media-body pl-2">
+              
+              <div className="col-md-12 col-sm-12 media-body">
                 <div className="row">
                   <div className="col  description">
                     <h3 className="mt-2" style={{ color: "black" }}>

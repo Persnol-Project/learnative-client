@@ -107,10 +107,10 @@ const SingleCourse = () => {
                   <>
                     <div className="wrapper">
                       <ReactPlayer
-                        className="player"
+                        className="player mx-auto"
                         url={course.lessons[clicked].video.Location}
-                        width="100%"
-                        height="100%"
+                        width="70%"
+                        height="70%"
                         controls
                       />
                     </div>
@@ -119,17 +119,21 @@ const SingleCourse = () => {
 
               <div
                 style={{
-                  background: "#5A6DF5",
-                  color: "white",
+                  background: "#f9c8b3",
+                  color: "black",
                   borderRadius: "15px",
                 }}
               >
-                <div className="text-center p-3" style={{ fontSize: "2rem" }}>
+                <div
+                  className="text-center p-3"
+                  style={{ fontSize: "2rem" }}
+                >
                   Description:{" "}
                 </div>
                 <ReactMarkdown
                   children={course.lessons[clicked].content}
                   className="single-post p-3"
+                  
                 />
               </div>
             </>
