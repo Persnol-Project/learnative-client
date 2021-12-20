@@ -14,7 +14,7 @@ app
       server.use(
         "/api",
         createProxyMiddleware({
-          target: "http://localhost:5500",
+          target: "https://learnative-server.herokuapp.com",
           changeOrigin: true,
         })
       );
