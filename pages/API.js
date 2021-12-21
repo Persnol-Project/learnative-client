@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const AXIOS = axios.create({
-    baseURL: "https://learnative-server.herokuapp.com/api",
+    baseURL: "https://learnative-server.herokuapp.com",
     withCredentials: true
 });
 
